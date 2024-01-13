@@ -21,7 +21,7 @@ Para rodar este projeto, é necessário ter instalado:
 ## Configuração e Instalação
 
 ### Clonando o Repositório
-Clone o repositório usando: [https://github.com/gfmaurila/poc.api.mongodb.net8](https://github.com/gfmaurila/poc.api.redis.net8)
+Clone o repositório usando: https://github.com/gfmaurila/poc.api.redis.net8
 
 ### Configurando o Docker e Docker Compose
 docker-compose up --build
