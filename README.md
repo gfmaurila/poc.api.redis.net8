@@ -25,6 +25,7 @@ Clone o repositório usando: https://github.com/gfmaurila/poc.api.redis.net8
 
 ### Configurando o Docker e Docker Compose
 docker-compose up --build
+http://localhost:5074/swagger/index.html
 
 ## Autor
 
