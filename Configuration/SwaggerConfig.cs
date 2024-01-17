@@ -12,7 +12,7 @@ public static class SwaggerConfig
                 "v1",
                 new OpenApiInfo
                 {
-                    Title = "Loja teste",
+                    Title = "Cadastro de Produtos",
                     Version = "v1"
                 }
             );
