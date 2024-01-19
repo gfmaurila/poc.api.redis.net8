@@ -15,14 +15,23 @@ builder.Services.AddSwaggerConfig(builder.Configuration);
 string redisConfiguration = builder.Configuration.GetSection("Redis:Configuration").Value;
 builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConfiguration));
 
-// Service
+// Repository
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 
+// Configura middlewere
+app.UseStatusCodePages(async statusCodeContext => await Results.Problem(statusCode: statusCodeContext.HttpContext.Response.StatusCode).ExecuteAsync(statusCodeContext.HttpContext));
+
+
+
+#region Conttroller
 app.RegisterProdutosEndpoints();
+#endregion
+
+
 
 app.UseAuthorization();
 
